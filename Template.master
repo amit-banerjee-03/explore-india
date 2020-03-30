@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Template.master.cs" Inherits="Template" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            background-color: #DFDFDF;
+        }
+        .auto-style2 {
+            height: 613px;
+        }
+        .auto-style3 {
+            height: 69px;
+        }
+        .auto-style4 {
+            height: 31px;
+        }
+        .auto-style5 {
+            width: 100%;
+            height: 52px;
+            background-color: #E1E5F0;
+        }
+        .auto-style6 {
+            width: 177px;
+            height: 70px;
+        }
+        .auto-style8 {
+            height: 70px;
+        }
+        .auto-style9 {
+            margin-left: 175px;
+        }
+        .auto-style10 {
+            width: 100%;
+            height: 40px;
+        }
+        .auto-style11 {
+            width: 100px;
+        }
+        .auto-style12 {
+            width: 130px;
+        }
+        .auto-style13 {
+            width: 361px;
+        }
+        .auto-style14 {
+            width: 72px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" style="padding: 0px; margin: -8px">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        
+        <table align="left" class="auto-style1" style="background-color: #E1E5F0">
+            <tr style="height:70px;">
+                <td class="auto-style3" style="backgroundcolor: #5E308A;">
+                    <table align="left" class="auto-style5" style="border-bottom-style: solid; border-bottom-width: medium; border-color: #5E308A">
+                        <tr>
+                            <td class="auto-style6">
+                                <asp:Image ID="Image1" runat="server" Height="70px" ImageUrl="~/Images/Explore_India_icon1.png" Width="120px" />
+                            </td>
+                            <td class="auto-style8" style="font-size: xx-large; color: #5E308A; font-family: Rockwell; font-style: normal; font-weight: bold;">
+                                <asp:Label ID="Label1" Width="1200px" CssClass="auto-style9" runat="server" BorderColor="#5E308A" BorderStyle="Solid" Text="EXPLORE INDIA" style="border-right-style: none;border-right-width: 1000px;margin-left:-50px;"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">
+                    <table class="auto-style10">
+                        <tr>
+                            <td class="auto-style11" style="width:200px;height:40px;">
+                                <asp:Button ID="btn_home" runat="server" Text="HOME" Width="200px" Height="40px" BackColor="#1E96ED" BorderColor="#1E96ED" BorderStyle="Solid" Font-Bold="True" ForeColor="#E1E5F0" OnClick="btn_home_Click" />
+                            </td>
+                            <td class="auto-style12" style="width:200px;height:40px;">
+                                <asp:Button ID="btn_location" runat="server" OnClick="btn_location_Click" Text="LOCATION" Width="200px" Height="40px" BackColor="#1E96ED" BorderStyle="Solid" Font-Bold="True" ForeColor="#E1E5F0"/>
+                            </td>
+                            <td class="auto-style12" style="width:200px;height:40px;">
+                                <asp:Button ID="btn_fooding" runat="server" Text="FOODING &amp; LODGING"  Width="200px" Height="40px" BackColor="#1E96ED" BorderStyle="Solid" Font-Bold="True" ForeColor="#E1E5F0" OnClick="btn_fooding_Click" />
+                            </td>
+                            <td class="auto-style13" style="width:200px;height:40px;">
+                                <asp:Button ID="btn_maketrip" runat="server" Text="MAKE YOUR OWN TRIP" Width="200px" Height="40px" BackColor="#1E96ED" BorderStyle="Solid" Font-Bold="True" ForeColor="#E1E5F0" OnClick="btn_maketrip_Click"/>
+                            </td>
+                            <td class="auto-style13" style="width:200px;height:40px;">
+                                <asp:Button ID="btn_jointrip" runat="server" Text="JOIN A TRIP" Width="200px" Height="40px" BackColor="#1E96ED" BorderStyle="Solid" Font-Bold="True" ForeColor="#E1E5F0" OnClick="btn_jointrip_Click"/>
+                            </td>
+                            <td class="auto-style13" style="width:200px;height:40px;">
+                                <asp:Button ID="btn_tripstatus" runat="server" Text="TRIP STATUS" Width="200px" Height="40px" BackColor="#1E96ED" BorderStyle="Solid" Font-Bold="True" ForeColor="#E1E5F0" OnClick="btn_tripstatus_Click"/>
+                            </td>
+                            <td class="auto-style14" style="height:40px;">
+                                <asp:Menu ID="menu_items" runat="server" Orientation="Horizontal" Font-Size="Large" OnMenuItemClick="menu_items_MenuItemClick" ForeColor="#5E308A">
+                                    <Items>
+                                        <asp:MenuItem ImageUrl="~/Images/settings2.png" Text="-" Value="-" Selectable="False">
+                                            <asp:MenuItem Text="." Value="0" Enabled="False" Selectable="False"></asp:MenuItem>
+                                            <asp:MenuItem Text="Login" Value="Login"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" style="vertical-align: top">
+                    <br />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <span style="color: rgb(94, 48, 138); font-family: Tahoma, Geneva, sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 14.2857px; orphans: auto; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(225, 229, 240);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; © 2016 ExploreIndia 
+                    (India) Private Limited. All Rights Reserved.</span></td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>
